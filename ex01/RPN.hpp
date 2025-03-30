@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pc <pc@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 06:23:36 by pc                #+#    #+#             */
-/*   Updated: 2025/03/29 17:08:11 by pc               ###   ########.fr       */
+/*   Created: 2025/03/30 06:26:45 by pc                #+#    #+#             */
+/*   Updated: 2025/03/30 06:27:43 by pc               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#ifndef RPN_HPP
+#define RPN_HPP
 
-int main (int argc, char **argv)
-{
-    if (argc != 2)
-    {
-        std::cerr << "Error: could not open file." << std::endl;
-        return (1);
-    }
-    btc btc;
-    size_t i = 0;
-    fill_maps(btc, i, argv);
-    print_output (btc, i);
-    return 0;
-}
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <new>
+#include <exception>
+#include <stdexcept>
+#include <vector>
+#include <list>
+#include <map>
+#include <stack>
+#include <algorithm>
+#include <iterator>
+#include <limits>
+#include <typeinfo>
+#include <cctype>
+#include <iomanip>
+#include <sstream>
+
+
+
+#endif

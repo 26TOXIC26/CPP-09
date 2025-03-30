@@ -6,7 +6,7 @@
 /*   By: pc <pc@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 06:23:40 by pc                #+#    #+#             */
-/*   Updated: 2025/03/28 06:35:27 by pc               ###   ########.fr       */
+/*   Updated: 2025/03/29 17:02:10 by pc               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,22 @@
 #include <limits>
 #include <typeinfo>
 #include <cctype>
+#include <iomanip>
+#include <sstream>
+
+typedef struct btc
+{
+    std::map<std::string, double> csv;
+    std::map<size_t, std::string> txt_date;
+    std::map<size_t, std::string> txt_value;
+    std::string line;
+}   btc;
+
+std::string find_closest (std::map<std::string, double> csv, std::string date);
+int check_value (std::string value);
+int check_date(std::string date);
+void fill_maps(btc &btc, size_t &i, char **argv);
+void print_output (btc &btc, size_t &i);
+
 
 #endif
