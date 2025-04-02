@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pc <pc@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 06:23:36 by pc                #+#    #+#             */
-/*   Updated: 2025/03/31 22:49:48 by pc               ###   ########.fr       */
+/*   Created: 2025/03/31 22:50:32 by pc                #+#    #+#             */
+/*   Updated: 2025/03/31 22:51:37 by pc               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#ifndef PMERGEME_HPP
+#define PMERGEME_HPP
 
-int main (int argc, char **argv)
-{
-    if (argc != 2)
-    {
-        std::cout << "Error: could not open file." << std::endl;
-        return (1);
-    }
-    btc btc;
-    size_t i = 0;
-    fill_maps(btc, i, argv);
-    print_output (btc, i);
-    return 0;
-}
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <new>
+#include <exception>
+#include <stdexcept>
+#include <vector>
+#include <list>
+#include <map>
+#include <stack>
+#include <algorithm>
+#include <iterator>
+#include <limits>
+#include <typeinfo>
+#include <cctype>
+#include <iomanip>
+#include <sstream>
+
+
+
+#endif

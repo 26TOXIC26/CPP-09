@@ -6,7 +6,7 @@
 /*   By: pc <pc@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 06:23:52 by pc                #+#    #+#             */
-/*   Updated: 2025/03/30 05:45:26 by pc               ###   ########.fr       */
+/*   Updated: 2025/03/31 22:49:48 by pc               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int check_value (std::string value)
 {
     if (value == "")
     {
-        std::cerr << "Error: not a number." << std::endl;
+        std::cout << "Error: not a number." << std::endl;
         return 0;        
     }
     char *end;
@@ -51,11 +51,11 @@ int check_value (std::string value)
     if (*end || num < 0 || num > 1000)
     {
         if (*end)
-            std::cerr << "Error: not a number." << std::endl;
+            std::cout << "Error: not a number." << std::endl;
         else if (num < 0)
-            std::cerr << "Error: not a positive number." << std::endl;
+            std::cout << "Error: not a positive number." << std::endl;
         else if (num > 1000)
-            std::cerr << "Error: too large a number." << std::endl;
+            std::cout << "Error: too large a number." << std::endl;
         return 0;
     }
     return 1;
@@ -118,7 +118,7 @@ void fill_maps(btc &btc, size_t &i, char **argv)
     std::ifstream csv_file ("data.csv");
     if (!data_file.is_open() || !csv_file.is_open())
     {
-        std::cerr << "Error: could not open file." << std::endl;
+        std::cout << "Error: could not open file." << std::endl;
         exit (1);
     }
     std::getline(data_file, btc.line);
@@ -164,7 +164,7 @@ void print_output (btc &btc, size_t &i)
                 {
                     btc.txt_date[j] = find_closest (btc.csv, btc.txt_date[j]);
                     if (btc.txt_date[j] == "2009-01-01")
-                        std::cerr << "Error: bad input" << std::endl;
+                        std::cout << "Error: bad input" << std::endl;
                     else
                     {
                         double result = std::strtod(btc.txt_value[j].c_str(), NULL) * btc.csv[btc.txt_date[j]];
@@ -174,6 +174,6 @@ void print_output (btc &btc, size_t &i)
             }
         }
         else
-            std::cerr << "Error: bad input => " << btc.txt_date[j] << std::endl;
+            std::cout << "Error: bad input => " << btc.txt_date[j] << std::endl;
     }
 }
